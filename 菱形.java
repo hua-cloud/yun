@@ -1,6 +1,5 @@
 package lingxing;//菱形
 import java.util.Scanner;
-/*此题解法过多，仅仅提供为空心和实心棱形分别提供一个参考答案*/
 public class  Lingxing {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
