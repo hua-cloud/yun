@@ -1,0 +1,31 @@
+package lianxi;//接口
+interface Com{//定义一个接口，//可以看做是一种特殊的类
+	int MAX = 46;
+	int f(int x);
+}
+class China implements Com{//China类实现接口
+	int number;
+	public int f(int x) {//将接口中的方法重写
+		int sum = 0;
+		for(int i = 1;i<=x;i++) {   
+			sum = sum + i;  
+		}    
+		return sum;  
+	}
+}
+class Japan implements Com{//Japan类实现接口
+	int number;
+	public int f(int x) {  //将接口中的方法重写                           
+		return MAX+x;//直接使用接口中的常量
+	}
+}
+public class Example2 {
+    public static void main(String args[]) {
+    	China zhang = new China();//创建对象
+    	Japan henlu = new Japan();//创建对象
+    	zhang.number = 32+Com.MAX;//用接口名访问接口的常量
+    	henlu.number = 14+Com.MAX;
+    	System.out.println("zhang的学号:"+zhang.number+"zhang求和结果:"+zhang.f(100));//调用重写的方法
+    	System.out.println("henlu的学号:"+henlu.number+"henlu求和的结果:"+henlu.f(100));
+    }
+}
