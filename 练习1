@@ -1,0 +1,55 @@
+package lianxi;//构造方法的主要作用就是创建对象
+/* 此个项目未使用构造方法初始化对象，容易漏掉对象的属性，与方法等
+import java.util.logging.Logger;
+class Student{
+	 private String name;
+	 private long ID;
+	 private double score;
+	 public String getName() {//一个方法来获取name的属性
+	   return name;
+	 }
+	 public void setName(String name) {//一个方法将输入的字符赋给当前对象name
+		 this.name = name;
+	 }
+	 public long getID() {
+		 return ID;
+	 }
+	 public void setID(Long id) {
+		 ID = id;
+	 }
+}
+public class Example1 
+   public static void main(String args[]) {
+	   Student s = new Student();//创建对象
+	   s.setName("张三");//通过对象来调用类中的方法
+	   s.setID( 170316L);
+	   System.out.println("学号为"+s.getID()+"的"+s.getName());
+   } 
+}*/
+/*public class Example1 {
+   private String name;
+   private String gender;
+   private long ID;
+   private long birthday;
+   Example1(String name, String gender,long ID,long birthday){//一个带参数的构造方法，对对象进行初始化操作
+	   this.name = name;
+	   this.gender = gender;
+	   this.ID = ID;
+	   this.birthday = birthday;
+   }
+   public static void main(String args[]) {
+	   Example1 s = new Example1("lily","女",10001,2000000026);//创建一个对象时，就已经对他赋好了值
+	   //当new了一个新对象是就对他进行了初始化
+	   System.out.println("姓名 :"+s.name+" 性别 :"+s.gender);
+}
+}*/
+public class Example1 {
+	private int i;
+	Example1(){//用构造方法对对象进行初始化操作
+		this.i = 5;
+		System.out.println(i);
+	}
+	public static void main(String args[]) {
+		Example1 s = new Example1();//创建新的对象时就已经完成初始化
+	}
+}
